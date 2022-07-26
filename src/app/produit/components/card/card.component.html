@@ -1,0 +1,26 @@
+<div class="card-image">    
+    <div class="card shadow-lg p-3 mb-5 bg-body">
+      <div class="image">
+        <div class="price">
+            <span >BRASIL FROMAGE BURGER</span> 
+            <span> 4000f</span>
+        </div>
+
+        <div *ngIf="this._router.url=='produit/catalogue'">
+        <div class="check form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+            <label class="form-check-label" for="inlineCheckbox1"></label>
+       
+        </div>
+    </div>
+       <div>
+
+       <div *ngIf="this._router.url=='produit/catalogue'">
+        
+       
+        <div style="display: none;" class="bouton"><blog-plusmoins></blog-plusmoins></div>
+        
+       </div>
+      </div>  
+    </div>
+</div>
