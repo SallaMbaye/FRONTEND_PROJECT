@@ -25,7 +25,7 @@ import { DetailcommandeComponent } from './pages/detailcommande/detailcommande.c
   CommonModule,
   CommandeRoutingModule,
   LayoutModule,
-    ProduitModule
+  ProduitModule
   ],
   exports:[
     PanierComponent,
