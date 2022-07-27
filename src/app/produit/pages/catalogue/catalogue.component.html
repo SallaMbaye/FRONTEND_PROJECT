@@ -1,24 +1,75 @@
-
 <blog-headerphoto></blog-headerphoto>
+
 <div class="container">
-    
-        <a routerLink="/produit/details/1"><blog-card></blog-card></a>
-        <a routerLink="/produit/details/1"><blog-card></blog-card></a>
-        <a routerLink="/produit/details/1"><blog-card></blog-card></a>
-        <a routerLink="/produit/details/1"><blog-card></blog-card></a>
-</div>
-
-
- <div class="container">
-   
-       <a routerLink="/produit/details:1"><blog-card></blog-card></a>
-       <a routerLink="/produit/details:1"><blog-card></blog-card></a>
-       <a routerLink="/produit/details:1"><blog-card></blog-card></a>
-       <a routerLink="/produit/details:1"><blog-card></blog-card></a>   
-
-</div>
+       <div *ngFor="let burger of burgers$|async"> 
+            <a  routerLink="/produit/details/1"><blog-burger [burgers]="burger"></blog-burger></a>
+        </div>       
+</div> 
 
 <div class="trait"></div>
+
+<div class="container">
+        <div *ngFor="let menu of menus$|async"> 
+             <a  routerLink="/produit/details/1"><blog-menu [menus]="menu"></blog-menu></a>
+         </div>       
+ </div> 
+ 
+ 
+
+
+ <!-- filter (Done:Recuperation par catégorie) (Doing:Affichage)-->
+<div style="display: none;" class="container">
+        <div class="row">
+          <div class="search-hero">
+            <select name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="&#61442;  Start searching for a hero by id or name or country">
+                <option class="form-control" value="menu"></option>
+                <option value="burger">burger</option>
+            </select>
+            <!-- <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="&#61442;  Start searching for a hero by id or name or country">
+           -->
+        
+        </div>
+          <table class="table table-striped">
+            <thead>
+            <tr>
+              <th>Id</th>
+              <th>Hero Name</th>
+              <th>Country</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let produit of produits$ | filter:searchText">
+              <td>{{produit.id}}</td>
+              <td>{{produit.nom}}</td>
+              <td>{{produit.prix}}</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+  <!-- <div class="container">
+        <div class="col-mb-3" *ngFor="let produit of produits$|async"> 
+             <a  routerLink="/produit/details/1"><blog-card [produits]="produit"></blog-card></a>
+         </div>       
+ </div> 
+ -->
+ 
+
+
+        
+      
+
+
 
 
 

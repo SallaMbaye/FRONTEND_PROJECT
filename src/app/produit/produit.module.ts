@@ -9,6 +9,11 @@ import { ProduitService } from './shared/services/produit.services';
 import { ListecardComponent } from './components/listecard/listecard.component';
 import { PlusmoinsComponent } from './components/plusmoins/plusmoins.component';
 import { HeaderphotoComponent } from './components/headerphoto/headerphoto.component';
+import { FormsModule } from '@angular/forms';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { BurgerComponent } from './components/burger/burger.component';
+import { MenuComponent } from './components/menu/menu.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -19,15 +24,16 @@ import { HeaderphotoComponent } from './components/headerphoto/headerphoto.compo
     ListecardComponent,
     PlusmoinsComponent,
     HeaderphotoComponent,
-   
-   
+    BurgerComponent,
+    MenuComponent
   ],
   imports: [
- 
   CommonModule,
   ProduitRoutingModule,
   LayoutModule,
-
+  FormsModule,
+  HttpClientModule,
+  Ng2SearchPipeModule
   ],
   
   providers:[

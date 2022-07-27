@@ -1,3 +1,19 @@
 <div class="itempanier shadow p-3 mb-5 bg-body rounded">
+    
     <blog-card></blog-card>
+
+    <!-- <div *ngIf="router.url== '/commande/detailcommande' ";else elseSalla>
+
+        <blog-plusmoins style="display: none;"></blog-plusmoins>
+
+    </div>
+
+    <ng-template #elseSalla><blog-plusmoins></blog-plusmoins></ng-template> -->
+
+    <div *ngIf="router.url=='/commande/detailcommande'; else elseBlock"><blog-plusmoins style="display: none;"></blog-plusmoins></div>
+
+    <ng-template #elseBlock><blog-plusmoins></blog-plusmoins></ng-template>
+
+<h2>1000f</h2>
+  
 </div>

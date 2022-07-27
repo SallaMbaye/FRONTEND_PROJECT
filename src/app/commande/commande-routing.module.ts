@@ -7,7 +7,8 @@ import { PanierComponent } from './pages/panier/panier.component';
 
 const routes: Routes = [
   {path:'panier',component:PanierComponent},
-  {path:'liste',component:CommandesComponent},
+  {path:'commandes',component:CommandesComponent},
+  {path:'detailcommande',component:DetailcommandeComponent},
   {path:'details',component:DetailcommandeComponent},
  
 ];

@@ -7,7 +7,24 @@
 
 
 
-<router-outlet></router-outlet>
+<router-outlet>
+
+    <!-- <h1>Example of Angular Search Filter</h1>
+    <div class="container">
+        <div class="search-name">
+            <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="on" placeholder=" SEARCH  ">
+        </div>
+        <ul *ngFor="let name of names | filter:searchText">
+            <li>
+                <span>{{name.country}}</span>
+            </li>
+        </ul>
+    </div>
+
+ -->
+
+
+</router-outlet>
 
 <div *ngIf="_router.url=='/securite/creation' || _router.url=='/securite/connexion'; else elseBlocks"><blog-footer style="display: none;"></blog-footer></div>
 <ng-template #elseBlocks><blog-footer></blog-footer></ng-template>

@@ -9,6 +9,18 @@ import { NavigationEnd, Router } from '@angular/router';
 export class AppComponent  implements OnInit{
   title = 'Integration Maquette';
 
+  searchText: any;
+    names = [
+        { country: 'Adil'},
+        { country: 'John'},
+        { country: 'Jinku'},
+        { country: 'Steve'},
+        { country: 'Sam'},
+        { country: 'Zeed'},
+        { country: 'Abraham'},
+        { country: 'Heldon'}
+    ];
+
   public location = '' ;
 
   constructor(public  _router : Router) 

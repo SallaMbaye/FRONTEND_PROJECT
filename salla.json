@@ -1,0 +1,20 @@
+{
+    "catalogue":{
+        
+            "menu": [
+             {
+                "id":1,"nom":"Menu A1","prix":5000,"image":"./photo/salla1-removebg-preview.png"
+            
+             }
+             
+        
+            ],
+            "burger": [
+                {
+                    "id":1,"nom":"Menu A1","prix":5000,"image":"./photo/salla1-removebg-preview.png"
+                
+                }
+            ]
+    }
+    
+}

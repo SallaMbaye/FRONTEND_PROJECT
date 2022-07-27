@@ -8,6 +8,7 @@ import { ItempanierComponent } from './components/itempanier/itempanier.componen
 import { ProduitModule } from '../produit/produit.module';
 
 import { DetailcommandeComponent } from './pages/detailcommande/detailcommande.component';
+import { CommandesComponent } from './pages/commandes/commandes.component';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { DetailcommandeComponent } from './pages/detailcommande/detailcommande.c
     ItempanierComponent,
     
     DetailcommandeComponent,
+         CommandesComponent,
     
 
   ],

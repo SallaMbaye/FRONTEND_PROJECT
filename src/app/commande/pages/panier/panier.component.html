@@ -1,25 +1,46 @@
 <div class="container">
     <blog-itempanier>
-       <blog-card></blog-card> 
-       <blog-plusmoins></blog-plusmoins>
-       <h1>1000</h1>
+       
     </blog-itempanier>
-    <blog-itempanier>
-        <blog-card></blog-card> 
-        <blog-plusmoins></blog-plusmoins>
-        <h1>1000</h1>
-     </blog-itempanier>
+    <blog-itempanier></blog-itempanier>
+   
      <blog-itempanier>
-        <input type="radio" name="" id=""><label for="">A consommer sur place</label>
-        <input type="radio" name="" id=""><label for="">A livrer</label>
-        <input type="text" name="" id="">
-        <input type="text" name="" id="">
-     </blog-itempanier>
-     <blog-itempanier>
-        <span>Total Commande </span>
-        <span>12000f</span>
+        
      </blog-itempanier>
 
-     <button type="button" class="btn  btn-lg">Commander</button>
+     <div class="itempanier shadow p-3 mb-5 bg-body rounded">
+      <div>
+         
+      <input class="radio" type="radio" name="" id="">
+      <label for="">A consommer sur place</label>
+      </div>
+      
+     <div>
+      
+      <input class="radio" type="radio" name="" id="">
+      <label for="">A livrer</label>
+     </div>
+     <div style="margin-right: 5%;">
+      <label for="">Numero Téléphone</label>
+      <input  class="a1" type="text" name="" id="">
+     <!--  <label for="">Adresse Livraison</label>
+     <input style="padding-left: 10%;" class="a1" type="text" name="" id=""> -->
+     <label for="">Adresse Livraison</label>
+      <select style="padding-left: 10%;" class="a1" name="zone" id="zone">
+          <option value="zone a">Zone A</option>
+          <option value="zone b">Zone B</option>
+          <option value="zone c">
+            Zone c
+          </option>
+         
+      </select>
+     </div>
+  </div>
 
+  <div class="itempanier shadow p-3 mb-5 bg-body rounded">
+
+      <h5 style="text-align: center ;margin-top: 5%;">Total Commande : <span>6000f</span></h5>
+      
+  </div>
+     <a routerLink="/commande/commandes" class="btn  btn-lg">Commander</a>
 </div>

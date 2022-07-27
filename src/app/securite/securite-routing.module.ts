@@ -8,7 +8,6 @@ const routes: Routes = [
   {path:'creation',component:CreationComponent},
   {path:'connexion',component:ConnexionComponent},
   
-  
 ];
 
 @NgModule({
