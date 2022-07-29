@@ -1,57 +1,97 @@
+<blog-header (newClick)="catClicked($event)"  ></blog-header>
+
 <blog-headerphoto></blog-headerphoto>
 
-<div class="container">
-       <div *ngFor="let burger of burgers$|async"> 
-            <a  routerLink="/produit/details/1"><blog-burger [burgers]="burger"></blog-burger></a>
-        </div>       
+<ng-container [ngSwitch]="value"> 
+  
+  
+  <ng-container  *ngSwitchCase="'burger'">
+
+    <a><blog-listecard *ngIf="catalogue$|async as catalogue" [prod]="catalogue.burgers" routerLink=""></blog-listecard></a>
+
+  </ng-container>
+      
+   <ng-container  *ngSwitchCase="'menu'">
+
+    <a><blog-listecard *ngIf="catalogue$|async as catalogue" [prod]="catalogue.menus" routerLink=""></blog-listecard></a>
+
+  </ng-container>   
+
+  <ng-container *ngSwitchDefault>
+
+    <a><blog-listecard *ngIf="catalogue$|async as catalogue" [prod]="catalogue.produits" routerLink=""></blog-listecard></a>
+
+  </ng-container>
+
+
+
+
+<!-- <p *ngIf="val">Value selected</p>
+<p style="background: skyblue">{{ val | json}}</p> -->
+
+ <!--  <a><blog-listecard *ngIf="catalogue$|async as catalogue" [prod]="catalogue.burgers" routerLink=""></blog-listecard></a>
+
+  <a><blog-listecard *ngIf="catalogue$|async as catalogue" [prod]="catalogue.menus" routerLink=""></blog-listecard></a>
+
+  <a><blog-listecard *ngIf="catalogue$|async as catalogue" [prod]="catalogue.produits" routerLink=""></blog-listecard></a>
+
+
+
+<div class="loader"></div> 
+ -->
+<!-- <div>
+  <blog-listecard *ngIf="catalogue$|async as catalogue" [prod]="catalogue.produits"></blog-listecard>
+</div> -->
+
+
+<!-- {{clickChangedHandler(true)|json}} -->
+
+<!-- filtre ====> NgClass et Evenements  -->
+
+<!-- <div [ngClass]="{ 'salla':  }"></div>
+
+
+ -->
+
+
+
+
+<!-- <blog-listecard [prod]="catalogue?.menus"></blog-listecard>
+ -->
+
+<!-- <blog-listecard [prod]="catalogue?.burgers"></blog-listecard>
+ -->
+
+<!-- <div class="container"  *ngFor="let prod of catalogue?.produit ">
+    <blog-card></blog-card>
 </div> 
+ -->
+<!-- <div class="container">
+  <div> 
+    <a  routerLink="/produit/details/:id"><blog-card></blog-card></a>
+  </div>       
+</div>  -->
 
-<div class="trait"></div>
+<!-- <div class="trait"></div>
 
 <div class="container">
-        <div *ngFor="let menu of menus$|async"> 
-             <a  routerLink="/produit/details/1"><blog-menu [menus]="menu"></blog-menu></a>
-         </div>       
- </div> 
- 
- 
+        <div > 
+          <a  routerLink="/produit/details/1"><blog-menu></blog-menu></a>
+        </div>       
+ </div>  -->
+
+
+<!-- {{catalogue|json}} -->
+<!-- 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 -->
 
 
  <!-- filter (Done:Recuperation par catégorie) (Doing:Affichage)-->
-<div style="display: none;" class="container">
-        <div class="row">
-          <div class="search-hero">
-            <select name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="&#61442;  Start searching for a hero by id or name or country">
-                <option class="form-control" value="menu"></option>
-                <option value="burger">burger</option>
-            </select>
-            <!-- <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="&#61442;  Start searching for a hero by id or name or country">
-           -->
-        
-        </div>
-          <table class="table table-striped">
-            <thead>
-            <tr>
-              <th>Id</th>
-              <th>Hero Name</th>
-              <th>Country</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr *ngFor="let produit of produits$ | filter:searchText">
-              <td>{{produit.id}}</td>
-              <td>{{produit.nom}}</td>
-              <td>{{produit.prix}}</td>
-            </tr>
-            </tbody>
-          </table>
-        </div>
-</div>
 
 
 
 
 
+<blog-footer></blog-footer>
 
 
 

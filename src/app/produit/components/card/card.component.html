@@ -1,9 +1,10 @@
 <div class="card-image">    
     <div class="card shadow-lg p-3 mb-5 bg-body">
-      <img [src]="produit?.image" alt="" class="image">
+      <a routerLink="/produit/details/{{produit?.id}}"><img src="data:image/png;base64,{{produit?.image}}" alt="" class="image"></a>
         <div class="price">
-            <span >{{produit?.nom}}</span> 
-            <span> {{produit?.prix}} f</span>
+            <span >{{produit?.nom}}</span>
+            <span >{{produit?.typeprod}}</span> 
+            <span> {{produit?.prix}}f</span>
         </div>
 
         <div *ngIf="this._router.url=='produit/catalogue'">

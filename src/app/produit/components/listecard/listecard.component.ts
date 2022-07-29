@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Produit } from '../../shared/models/produit.models';
 
 @Component({
   selector: 'blog-listecard',
@@ -7,12 +8,10 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ListecardComponent implements OnInit {
 
-  @Input()
-  url !: string;
-
-  constructor() { }
-
+  @Input('prod')  produits:Produit[]|undefined=[]
+  content : string = "bongo"
+  constructor() {}
   ngOnInit(): void {
   }
-
+  
 }

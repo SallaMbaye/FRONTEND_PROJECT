@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { NotfoundComponent } from './notfound/notfound.component';
 
+import { RouterModule, Routes } from '@angular/router';
+
+import { NotfoundComponent } from './notfound/notfound.component';
 
 const routes: Routes = [
 
@@ -13,14 +14,17 @@ const routes: Routes = [
   
   {path: 'commande', loadChildren: () => import('./commande/commande.module').then(m => m.CommandeModule) },
   
-  {path: "**",component: NotfoundComponent},   
+  {path: "**",component: NotfoundComponent}
+
 ];
 
 @NgModule({
+
   imports: [RouterModule.forRoot(routes,
-    
-    
-    )],
+
+)],
+
   exports: [RouterModule]
+  
 })
 export class AppRoutingModule { }

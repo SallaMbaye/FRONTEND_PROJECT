@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Menu } from '../../shared/models/produit.models';
 
 @Component({
   selector: 'blog-menu',
@@ -8,8 +7,7 @@ import { Menu } from '../../shared/models/produit.models';
 })
 export class MenuComponent implements OnInit {
 
-  @Input('menus') menu : Menu|null=null
-
+ 
 
   constructor() { }
 

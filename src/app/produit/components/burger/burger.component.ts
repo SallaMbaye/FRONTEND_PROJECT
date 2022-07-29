@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Burger } from '../../shared/models/produit.models';
 
 @Component({
   selector: 'blog-burger',
@@ -8,11 +7,10 @@ import { Burger } from '../../shared/models/produit.models';
 })
 export class BurgerComponent implements OnInit {
 
-  @Input('burgers') burger : Burger|null=null
-
+ /*  @Input('burgers') burger : Burger|null=null
+ */
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
 }

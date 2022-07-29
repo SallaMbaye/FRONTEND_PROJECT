@@ -1,8 +1,8 @@
 
-<div *ngIf="_router.url=='/securite/creation' || _router.url=='/securite/connexion'; else elseBlock"><blog-header style="display: none;"></blog-header></div>
+<div *ngIf="_router.url=='/securite/creation' || _router.url=='/securite/connexion'"><blog-header style="display: none;"></blog-header></div>
 
-<ng-template #elseBlock><blog-header></blog-header></ng-template>
-
+<!-- <ng-template #elseBlock><blog-header></blog-header></ng-template>
+ -->
 
 
 
@@ -26,6 +26,6 @@
 
 </router-outlet>
 
-<div *ngIf="_router.url=='/securite/creation' || _router.url=='/securite/connexion'; else elseBlocks"><blog-footer style="display: none;"></blog-footer></div>
-<ng-template #elseBlocks><blog-footer></blog-footer></ng-template>
-
+<div *ngIf="_router.url=='/securite/creation' || _router.url=='/securite/connexion'"><blog-footer style="display: none;"></blog-footer></div>
+<!-- <ng-template #elseBlocks><blog-footer></blog-footer></ng-template>
+ -->
